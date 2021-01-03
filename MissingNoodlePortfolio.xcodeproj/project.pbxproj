@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */; };
+		2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BAFF225A23591006C6E5D /* CoreDataController.swift */; };
+		2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BAFF925A250ED006C6E5D /* CloudKit.framework */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
@@ -14,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B0BAFEE25A23295006C6E5D /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		2B0BAFF225A23591006C6E5D /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		2B0BAFF625A250D2006C6E5D /* MissingNoodlePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MissingNoodlePortfolio.entitlements; sourceTree = "<group>"; };
+		2B0BAFF925A250ED006C6E5D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -28,18 +35,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0BAFEB25A23253006C6E5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BAFEC25A23277006C6E5D /* CoreData */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2B0BAFEC25A23277006C6E5D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		2B0BAFF125A2355B006C6E5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BAFF225A23591006C6E5D /* CoreDataController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2B0BAFF825A250ED006C6E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BAFF925A250ED006C6E5D /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BD92765259F9F9900E25360 = {
 			isa = PBXGroup;
 			children = (
 				2BE0747025A13FAA00254F71 /* README.md */,
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2BD9276F259F9F9900E25360 /* Products */,
+				2B0BAFF825A250ED006C6E5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +95,7 @@
 		2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				2B0BAFF625A250D2006C6E5D /* MissingNoodlePortfolio.entitlements */,
 				2BE0746925A13D2200254F71 /* Supporting */,
 				2BE0746B25A13D4600254F71 /* App */,
 			);
@@ -83,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				2BE0746E25A13E1300254F71 /* Main */,
+				2B0BAFF125A2355B006C6E5D /* Controllers */,
+				2B0BAFEB25A23253006C6E5D /* Models */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -187,7 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */,
 				2BD92774259F9F9900E25360 /* ContentView.swift in Sources */,
+				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
 				2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MissingNoodlePortfolio/MissingNoodlePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MissingNoodlePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 48CGK73HZD;
@@ -338,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MissingNoodlePortfolio/MissingNoodlePortfolio.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MissingNoodlePortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 48CGK73HZD;
@@ -377,6 +425,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B0BAFEE25A23295006C6E5D /* Main.xcdatamodel */,
+			);
+			currentVersion = 2B0BAFEE25A23295006C6E5D /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2BD92766259F9F9900E25360 /* Project object */;
 }
