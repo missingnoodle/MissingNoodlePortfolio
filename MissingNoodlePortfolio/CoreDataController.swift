@@ -62,7 +62,7 @@ class CoreDataController: ObservableObject {
         _ = try? container.viewContext.execute(batchDeleteRequest2)
     }
 
-    private func createSampleData() throws {
+    func createSampleData() throws {
         let viewContext = container.viewContext // the pool of data loaded from disk
 
         for i in 1...5 {
