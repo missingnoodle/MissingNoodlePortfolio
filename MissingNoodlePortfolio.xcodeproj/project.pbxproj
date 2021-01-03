@@ -12,6 +12,8 @@
 		2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BAFF925A250ED006C6E5D /* CloudKit.framework */; };
 		2B0BAFFF25A25BD0006C6E5D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BAFFE25A25BD0006C6E5D /* HomeView.swift */; };
 		2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */; };
+		2B0BB00825A26AD7006C6E5D /* Item-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */; };
+		2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		2B0BAFF925A250ED006C6E5D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2B0BAFFE25A25BD0006C6E5D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */,
+				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
+				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -81,7 +87,6 @@
 		2B0BAFFC25A25B9C006C6E5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2BE0746E25A13E1300254F71 /* Main */,
 				2B0BAFFD25A25BAD006C6E5D /* Home */,
 				2B0BB00125A25DC8006C6E5D /* Projects */,
 			);
@@ -154,20 +159,13 @@
 		2BE0746B25A13D4600254F71 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2B0BAFFC25A25B9C006C6E5D /* Views */,
-				2B0BAFF125A2355B006C6E5D /* Controllers */,
-				2B0BAFEB25A23253006C6E5D /* Models */,
-			);
-			name = App;
-			sourceTree = "<group>";
-		};
-		2BE0746E25A13E1300254F71 /* Main */ = {
-			isa = PBXGroup;
-			children = (
 				2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */,
 				2BD92773259F9F9900E25360 /* ContentView.swift */,
+				2B0BAFF125A2355B006C6E5D /* Controllers */,
+				2B0BAFEB25A23253006C6E5D /* Models */,
+				2B0BAFFC25A25B9C006C6E5D /* Views */,
 			);
-			name = Main;
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +261,12 @@
 			files = (
 				2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */,
 				2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */,
+				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
 				2BD92774259F9F9900E25360 /* ContentView.swift in Sources */,
 				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
 				2B0BAFFF25A25BD0006C6E5D /* HomeView.swift in Sources */,
 				2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */,
+				2B0BB00825A26AD7006C6E5D /* Item-CoreDataHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
