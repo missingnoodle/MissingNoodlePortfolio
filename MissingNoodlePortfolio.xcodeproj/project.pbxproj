@@ -19,7 +19,8 @@
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BD92775259F9F9A00E25360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2BD9277A259F9F9A00E25360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD9277A259F9F9A00E25360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		2BD92765259F9F9900E25360 = {
 			isa = PBXGroup;
 			children = (
+				2BE0747025A13FAA00254F71 /* README.md */,
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2BD9276F259F9F9900E25360 /* Products */,
 			);
@@ -52,11 +54,8 @@
 		2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */,
-				2BD92773259F9F9900E25360 /* ContentView.swift */,
-				2BD92775259F9F9A00E25360 /* Assets.xcassets */,
-				2BD9277A259F9F9A00E25360 /* Info.plist */,
-				2BD92777259F9F9A00E25360 /* Preview Content */,
+				2BE0746925A13D2200254F71 /* Supporting */,
+				2BE0746B25A13D4600254F71 /* App */,
 			);
 			path = MissingNoodlePortfolio;
 			sourceTree = "<group>";
@@ -66,7 +65,35 @@
 			children = (
 				2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */,
 			);
+			name = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BE0746925A13D2200254F71 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2BD92775259F9F9A00E25360 /* Assets.xcassets */,
+				2BD9277A259F9F9A00E25360 /* Info.plist */,
+				2BD92777259F9F9A00E25360 /* Preview Content */,
+			);
+			name = Supporting;
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BE0746B25A13D4600254F71 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2BE0746E25A13E1300254F71 /* Main */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		2BE0746E25A13E1300254F71 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */,
+				2BD92773259F9F9900E25360 /* ContentView.swift */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +104,7 @@
 			buildConfigurationList = 2BD9277D259F9F9A00E25360 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolio" */;
 			buildPhases = (
 				2BD9276A259F9F9900E25360 /* Sources */,
+				2BE0746425A1388800254F71 /* Run Script - Swiftlint */,
 				2BD9276B259F9F9900E25360 /* Frameworks */,
 				2BD9276C259F9F9900E25360 /* Resources */,
 			);
@@ -132,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BE0746425A1388800254F71 /* Run Script - Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BD9276A259F9F9900E25360 /* Sources */ = {
