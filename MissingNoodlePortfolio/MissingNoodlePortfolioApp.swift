@@ -21,6 +21,12 @@ struct MissingNoodlePortfolioApp: App {
             ContentView()
                 .environment(\.managedObjectContext, coreDataController.container.viewContext)
                 .environmentObject(coreDataController)
+                .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
+                           perform: save)
         }
+    }
+
+    func save(_ note: Notification) {
+        coreDataController.save()
     }
 }
