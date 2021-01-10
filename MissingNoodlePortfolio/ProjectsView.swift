@@ -27,8 +27,10 @@ struct ProjectsView: View {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: Text(project.projectTitle)) {
                         ForEach(project.projectItems) { item in
-                            Text(item.itemTitle)
+                            ItemRowView(item: item)
                         }
+                        // Or
+//                        ForEach(project.projectItems, content: ItemRowView.init) // for simple single paramater views
                     }
                 }
             }
