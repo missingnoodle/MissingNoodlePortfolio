@@ -36,7 +36,8 @@ struct EditProjectView: View {
     var body: some View {
         Form {
             Section(header: Text("Basic settings")) {
-                 TextField("Project name", text: $title, onCommit: update)
+                TextField("Project name", text: $title, onEditingChanged: { if !$0 { update() } })
+//                 TextField("Project name", text: $title.onChange(update), onCommit: update)
 //                TextField("Project name", text: $title.onChange(update))
                 TextField("Description of this project", text: $detail.onChange(update))
             }
