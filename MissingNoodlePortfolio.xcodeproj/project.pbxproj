@@ -20,6 +20,7 @@
 		2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */; };
 		2B11BC6725AAB642008F6D4D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B11BC6625AAB642008F6D4D /* Colors.xcassets */; };
 		2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */; };
+		2B5F5C2725B3805B00C294A1 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C2625B3805B00C294A1 /* Stack.swift */; };
 		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
 		2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
@@ -53,6 +54,7 @@
 		2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2B11BC6625AAB642008F6D4D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		2B5F5C2625B3805B00C294A1 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingNoodlePortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodleBaseTestCase.swift; sourceTree = "<group>"; };
 		2B5F5C3225B3B83300C294A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		2B11BC5D25AAABA9008F6D4D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2B5F5C2525B3802E00C294A1 /* DataStructures */,
 				2B11BC5E25AAABB7008F6D4D /* Extensions */,
 			);
 			name = Utilities;
@@ -152,6 +155,14 @@
 				2B11BC5F25AAAC18008F6D4D /* Binding-OnChange.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		2B5F5C2525B3802E00C294A1 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				2B5F5C2625B3805B00C294A1 /* Stack.swift */,
+			);
+			name = DataStructures;
 			sourceTree = "<group>";
 		};
 		2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */ = {
@@ -394,6 +405,7 @@
 			files = (
 				2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */,
 				2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */,
+				2B5F5C2725B3805B00C294A1 /* Stack.swift in Sources */,
 				2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */,
 				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
 				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
