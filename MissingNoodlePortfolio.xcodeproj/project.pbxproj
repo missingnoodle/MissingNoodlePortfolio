@@ -19,11 +19,22 @@
 		2B11BC6025AAAC18008F6D4D /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC5F25AAAC18008F6D4D /* Binding-OnChange.swift */; };
 		2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */; };
 		2B11BC6725AAB642008F6D4D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B11BC6625AAB642008F6D4D /* Colors.xcassets */; };
+		2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
 		2BD92779259F9F9A00E25360 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B5F5C3325B3B83300C294A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD92766259F9F9900E25360 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD9276D259F9F9900E25360;
+			remoteInfo = MissingNoodlePortfolio;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2B0BAFEE25A23295006C6E5D /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
@@ -39,16 +50,24 @@
 		2B11BC5F25AAAC18008F6D4D /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2B11BC6625AAB642008F6D4D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BD92775259F9F9A00E25360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2BD9277A259F9F9A00E25360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		2BD9277A259F9F9A00E25360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B5F5C2B25B3B83300C294A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BD9276B259F9F9900E25360 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,28 +79,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B0BAFEB25A23253006C6E5D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B0BAFEC25A23277006C6E5D /* CoreData */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		2B0BAFEC25A23277006C6E5D /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */,
-				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
-				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
-			);
-			name = CoreData;
-			sourceTree = "<group>";
-		};
 		2B0BAFF125A2355B006C6E5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2B0BAFF225A23591006C6E5D /* CoreDataController.swift */,
+				2BA5C61E25AB9FC0001C3397 /* CoreData */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -94,14 +95,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2B0BAFFC25A25B9C006C6E5D /* Views */ = {
+		2B0BAFFC25A25B9C006C6E5D /* Activities */ = {
 			isa = PBXGroup;
 			children = (
 				2B0BAFFD25A25BAD006C6E5D /* Home */,
 				2B0BB00125A25DC8006C6E5D /* Projects */,
-				2B11BC5625AA9EC1008F6D4D /* Items */,
 			);
-			name = Views;
+			name = Activities;
 			sourceTree = "<group>";
 		};
 		2B0BAFFD25A25BAD006C6E5D /* Home */ = {
@@ -115,8 +115,10 @@
 		2B0BB00125A25DC8006C6E5D /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				2B11BC5625AA9EC1008F6D4D /* Items */,
 				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
 				2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */,
+				2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -146,6 +148,52 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2BA5C61E25AB9FC0001C3397 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */,
+				2B0BAFF225A23591006C6E5D /* CoreDataController.swift */,
+				2BA5C61F25AB9FE4001C3397 /* Model-Extensions */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		2BA5C61F25AB9FE4001C3397 /* Model-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
+				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
+			);
+			name = "Model-Extensions";
+			sourceTree = "<group>";
+		};
+		2BA5C62025ABA060001C3397 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BA5C62125ABA0C7001C3397 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BD92777259F9F9A00E25360 /* Preview Content */,
+				2BD92775259F9F9A00E25360 /* Assets.xcassets */,
+				2B11BC6625AAB642008F6D4D /* Colors.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2BA5C62225ABA105001C3397 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2BA5C62025ABA060001C3397 /* Configuration */,
+				2BA5C62125ABA0C7001C3397 /* Resources */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
 		2BD92765259F9F9900E25360 = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				2B0BAFF625A250D2006C6E5D /* MissingNoodlePortfolio.entitlements */,
-				2BE0746925A13D2200254F71 /* Supporting */,
-				2BE0746B25A13D4600254F71 /* App */,
+				2BD9277A259F9F9A00E25360 /* Info.plist */,
+				2BA5C62225ABA105001C3397 /* Supporting */,
+				2BE0746B25A13D4600254F71 /* MissingNoodlePortfolioApp */,
+				2B0BAFF125A2355B006C6E5D /* Controllers */,
 			);
 			path = MissingNoodlePortfolio;
 			sourceTree = "<group>";
@@ -179,32 +229,18 @@
 			children = (
 				2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */,
 			);
-			name = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2BE0746925A13D2200254F71 /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-				2BD92775259F9F9A00E25360 /* Assets.xcassets */,
-				2B11BC6625AAB642008F6D4D /* Colors.xcassets */,
-				2BD9277A259F9F9A00E25360 /* Info.plist */,
-				2BD92777259F9F9A00E25360 /* Preview Content */,
-			);
-			name = Supporting;
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2BE0746B25A13D4600254F71 /* App */ = {
+		2BE0746B25A13D4600254F71 /* MissingNoodlePortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
 				2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */,
 				2BD92773259F9F9900E25360 /* ContentView.swift */,
-				2B0BAFF125A2355B006C6E5D /* Controllers */,
-				2B0BAFEB25A23253006C6E5D /* Models */,
+				2B0BAFFC25A25B9C006C6E5D /* Activities */,
 				2B11BC5D25AAABA9008F6D4D /* Utilities */,
-				2B0BAFFC25A25B9C006C6E5D /* Views */,
 			);
-			name = App;
+			name = MissingNoodlePortfolioApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +297,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B5F5C2C25B3B83300C294A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BD9276C259F9F9900E25360 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -303,6 +346,7 @@
 				2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */,
 				2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */,
 				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
+				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
 				2BD92774259F9F9900E25360 /* ContentView.swift in Sources */,
 				2B11BC5B25AAA78E008F6D4D /* ItemRowView.swift in Sources */,
 				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
@@ -368,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +488,7 @@
 				DEVELOPMENT_TEAM = 48CGK73HZD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MissingNoodlePortfolio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +511,7 @@
 				DEVELOPMENT_TEAM = 48CGK73HZD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = MissingNoodlePortfolio/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
