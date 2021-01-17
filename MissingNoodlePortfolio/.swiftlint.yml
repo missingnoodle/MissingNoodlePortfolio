@@ -42,7 +42,7 @@ opt_in_rules:
   - fallthrough
   - fatal_error_message
   # - file_header
-  - file_name
+  # - file_name
   # - file_types_order
   - first_where
   # - force_unwrapping
@@ -127,13 +127,13 @@ identifier_name:
     - id
 number_separator:
   minimum_length: 5
-file_name:
-  excluded:
-    - main.swift
-    - LinuxMain.swift
-    - TestHelpers.swift
-    - shim.swift
-    - AutomaticRuleTests.generated.swift
+#file_name:
+#  excluded:
+#    - main.swift
+#    - LinuxMain.swift
+#    - TestHelpers.swift
+#    - shim.swift
+#    - AutomaticRuleTests.generated.swift
 conditional_returns_on_newline:
   if_only: true
 

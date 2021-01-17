@@ -20,6 +20,8 @@
 		2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */; };
 		2B11BC6725AAB642008F6D4D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B11BC6625AAB642008F6D4D /* Colors.xcassets */; };
 		2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */; };
+		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
+		2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
@@ -51,6 +53,10 @@
 		2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2B11BC6625AAB642008F6D4D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
+		2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingNoodlePortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodleBaseTestCase.swift; sourceTree = "<group>"; };
+		2B5F5C3225B3B83300C294A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsstTests.swift; sourceTree = "<group>"; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +154,16 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */,
+				2B5F5C3225B3B83300C294A1 /* Info.plist */,
+				2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */,
+			);
+			path = MissingNoodlePortfolioTests;
+			sourceTree = "<group>";
+		};
 		2BA5C61E25AB9FC0001C3397 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +215,7 @@
 			children = (
 				2BE0747025A13FAA00254F71 /* README.md */,
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
+				2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
 				2BD9276F259F9F9900E25360 /* Products */,
 				2B0BAFF825A250ED006C6E5D /* Frameworks */,
 			);
@@ -208,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */,
+				2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +264,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B5F5C2D25B3B83300C294A1 /* MissingNoodlePortfolioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B5F5C3525B3B83300C294A1 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolioTests" */;
+			buildPhases = (
+				2B5F5C2A25B3B83300C294A1 /* Sources */,
+				2B5F5C2B25B3B83300C294A1 /* Frameworks */,
+				2B5F5C2C25B3B83300C294A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B5F5C3425B3B83300C294A1 /* PBXTargetDependency */,
+			);
+			name = MissingNoodlePortfolioTests;
+			productName = MissingNoodlePortfolioTests;
+			productReference = 2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2BD9276D259F9F9900E25360 /* MissingNoodlePortfolio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD9277D259F9F9A00E25360 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolio" */;
@@ -273,6 +309,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					2B5F5C2D25B3B83300C294A1 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 2BD9276D259F9F9900E25360;
+					};
 					2BD9276D259F9F9900E25360 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -292,6 +332,7 @@
 			projectRoot = "";
 			targets = (
 				2BD9276D259F9F9900E25360 /* MissingNoodlePortfolio */,
+				2B5F5C2D25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -338,6 +379,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B5F5C2A25B3B83300C294A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */,
+				2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BD9276A259F9F9900E25360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,7 +410,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2B5F5C3425B3B83300C294A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD9276D259F9F9900E25360 /* MissingNoodlePortfolio */;
+			targetProxy = 2B5F5C3325B3B83300C294A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2B5F5C3625B3B83300C294A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48CGK73HZD;
+				INFOPLIST_FILE = MissingNoodlePortfolioTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingnoodle.MissingNoodlePortfolioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MissingNoodlePortfolio.app/MissingNoodlePortfolio";
+			};
+			name = Debug;
+		};
+		2B5F5C3725B3B83300C294A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48CGK73HZD;
+				INFOPLIST_FILE = MissingNoodlePortfolioTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingnoodle.MissingNoodlePortfolioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MissingNoodlePortfolio.app/MissingNoodlePortfolio";
+			};
+			name = Release;
+		};
 		2BD9277B259F9F9A00E25360 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -526,6 +626,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B5F5C3525B3B83300C294A1 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B5F5C3625B3B83300C294A1 /* Debug */,
+				2B5F5C3725B3B83300C294A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2BD92769259F9F9900E25360 /* Build configuration list for PBXProject "MissingNoodlePortfolio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
