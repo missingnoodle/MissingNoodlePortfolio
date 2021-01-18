@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:Playgrounds"
-      name = "Playgrounds">
-      <FileRef
-         location = "group:/Users/tblack/Development/Projects/iOS_macOS/MissingNoodlePortfolio/Playgrounds/iOSPlayground.playground">
-      </FileRef>
-      <FileRef
-         location = "group:MacOSPlayground.playground">
-      </FileRef>
-   </Group>
    <FileRef
       location = "container:MissingNoodlePortfolio.xcodeproj">
    </FileRef>

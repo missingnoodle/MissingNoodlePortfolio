@@ -59,6 +59,8 @@
 		2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodleBaseTestCase.swift; sourceTree = "<group>"; };
 		2B5F5C3225B3B83300C294A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsstTests.swift; sourceTree = "<group>"; };
+		2B6CBA8F25B5FC12006D47C8 /* iOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2B6CBA9225B5FC13006D47C8 /* MacOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MacOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,15 @@
 			path = MissingNoodlePortfolioTests;
 			sourceTree = "<group>";
 		};
+		2B6CBA8E25B5FC12006D47C8 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				2B6CBA9225B5FC13006D47C8 /* MacOSPlayground.playground */,
+				2B6CBA8F25B5FC12006D47C8 /* iOSPlayground.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
 		2BA5C61E25AB9FC0001C3397 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +235,7 @@
 		2BD92765259F9F9900E25360 = {
 			isa = PBXGroup;
 			children = (
+				2B6CBA8E25B5FC12006D47C8 /* Playgrounds */,
 				2BE0747025A13FAA00254F71 /* README.md */,
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
