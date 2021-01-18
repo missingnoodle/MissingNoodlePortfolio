@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,9 +20,9 @@
 		2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */; };
 		2B11BC6725AAB642008F6D4D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B11BC6625AAB642008F6D4D /* Colors.xcassets */; };
 		2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */; };
-		2B5F5C2725B3805B00C294A1 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C2625B3805B00C294A1 /* Stack.swift */; };
 		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
 		2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */; };
+		2B6CBA9D25B5FD4F006D47C8 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6CBA9C25B5FD4F006D47C8 /* MissingNoodleKit */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
@@ -54,13 +54,13 @@
 		2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2B11BC6625AAB642008F6D4D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
-		2B5F5C2625B3805B00C294A1 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingNoodlePortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodleBaseTestCase.swift; sourceTree = "<group>"; };
 		2B5F5C3225B3B83300C294A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsstTests.swift; sourceTree = "<group>"; };
 		2B6CBA8F25B5FC12006D47C8 /* iOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B6CBA9225B5FC13006D47C8 /* MacOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MacOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2B6CBA9925B5FD2E006D47C8 /* MissingNoodleKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MissingNoodleKit; path = ../MissingNoodleKit; sourceTree = "<group>"; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */,
+				2B6CBA9D25B5FD4F006D47C8 /* MissingNoodleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +163,6 @@
 		2B5F5C2525B3802E00C294A1 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				2B5F5C2625B3805B00C294A1 /* Stack.swift */,
 			);
 			name = DataStructures;
 			sourceTree = "<group>";
@@ -226,6 +226,7 @@
 		2BA5C62225ABA105001C3397 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				2BE0747025A13FAA00254F71 /* README.md */,
 				2BA5C62025ABA060001C3397 /* Configuration */,
 				2BA5C62125ABA0C7001C3397 /* Resources */,
 			);
@@ -235,8 +236,7 @@
 		2BD92765259F9F9900E25360 = {
 			isa = PBXGroup;
 			children = (
-				2B6CBA8E25B5FC12006D47C8 /* Playgrounds */,
-				2BE0747025A13FAA00254F71 /* README.md */,
+				2B6CBA9925B5FD2E006D47C8 /* MissingNoodleKit */,
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
 				2BD9276F259F9F9900E25360 /* Products */,
@@ -256,6 +256,7 @@
 		2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				2B6CBA8E25B5FC12006D47C8 /* Playgrounds */,
 				2B0BAFF625A250D2006C6E5D /* MissingNoodlePortfolio.entitlements */,
 				2BD9277A259F9F9A00E25360 /* Info.plist */,
 				2BA5C62225ABA105001C3397 /* Supporting */,
@@ -319,6 +320,9 @@
 			dependencies = (
 			);
 			name = MissingNoodlePortfolio;
+			packageProductDependencies = (
+				2B6CBA9C25B5FD4F006D47C8 /* MissingNoodleKit */,
+			);
 			productName = MissingNoodlePortfolio;
 			productReference = 2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */;
 			productType = "com.apple.product-type.application";
@@ -417,7 +421,6 @@
 			files = (
 				2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */,
 				2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */,
-				2B5F5C2725B3805B00C294A1 /* Stack.swift in Sources */,
 				2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */,
 				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
 				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
@@ -678,6 +681,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B6CBA9C25B5FD4F006D47C8 /* MissingNoodleKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MissingNoodleKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */ = {
