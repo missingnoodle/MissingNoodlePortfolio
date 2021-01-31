@@ -136,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				2B11BC5625AA9EC1008F6D4D /* Items */,
+				2BDA58D725C66B04003F2F63 /* Models */,
 				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
 				2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */,
 				2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */,
@@ -147,6 +148,7 @@
 		2B11BC5625AA9EC1008F6D4D /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				2BDA58D925C66B36003F2F63 /* Models */,
 				2B11BC5725AA9EFC008F6D4D /* EditItemView.swift */,
 				2B11BC5A25AAA78E008F6D4D /* ItemRowView.swift */,
 			);
@@ -200,18 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				2B0BAFF225A23591006C6E5D /* CoreDataController.swift */,
-				2BA5C61F25AB9FE4001C3397 /* Model-Extensions */,
 			);
 			name = CoreData;
-			sourceTree = "<group>";
-		};
-		2BA5C61F25AB9FE4001C3397 /* Model-Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
-				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
-			);
-			name = "Model-Extensions";
 			sourceTree = "<group>";
 		};
 		2BA5C62025ABA060001C3397 /* Configuration */ = {
@@ -288,10 +280,34 @@
 		2BDA58D025C6606F003F2F63 /* Awards */ = {
 			isa = PBXGroup;
 			children = (
-				2BDA58D125C660AA003F2F63 /* Award.swift */,
+				2BDA58D825C66B19003F2F63 /* Models */,
 				2BDA58D225C660AA003F2F63 /* AwardsView.swift */,
 			);
 			name = Awards;
+			sourceTree = "<group>";
+		};
+		2BDA58D725C66B04003F2F63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2BDA58D825C66B19003F2F63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BDA58D125C660AA003F2F63 /* Award.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2BDA58D925C66B36003F2F63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		2BE0746B25A13D4600254F71 /* MissingNoodlePortfolioApp */ = {
