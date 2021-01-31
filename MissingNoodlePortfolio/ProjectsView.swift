@@ -44,8 +44,10 @@ struct ProjectsView: View {
                                 }
                                 // Or ... ForEach(project.projectItems, content: ItemRowView.init) // for simple single paramater views
                                 .onDelete { offsets in
-                                    let allItems = project.projectItems(using: sortOrder)   // projectItems, does a lot of work, sorting, etc. we don't
-                                    for offset in offsets {                                 // want to do all that sortng each time through the for loop below
+                                    // projectItems, does a lot of work, sorting, etc. we don't
+                                    // want to do all that sortng each time through the for loop below
+                                    let allItems = project.projectItems(using: sortOrder)
+                                    for offset in offsets {
                                         let item = allItems[offset]
                                         dataController.delete(item)
                                     }
