@@ -27,6 +27,7 @@
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
 		2BD92779259F9F9A00E25360 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */; };
+		2BDA58C725C657B6003F2F63 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2BD92775259F9F9A00E25360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BD9277A259F9F9A00E25360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 				2B11BC5625AA9EC1008F6D4D /* Items */,
 				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
 				2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */,
+				2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */,
 				2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */,
 			);
 			name = Projects;
@@ -422,6 +425,7 @@
 				2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */,
 				2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */,
 				2B0BAFEF25A23295006C6E5D /* Main.xcdatamodeld in Sources */,
+				2BDA58C725C657B6003F2F63 /* SelectSomethingView.swift in Sources */,
 				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
 				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
 				2BD92774259F9F9900E25360 /* ContentView.swift in Sources */,
