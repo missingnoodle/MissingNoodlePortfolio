@@ -5,32 +5,36 @@
 //  Created by Tami Black on 1/3/21.
 //
 
+import MNExtensions
 import SwiftUI
 
 struct ProjectsView: View {
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-    
+
     @EnvironmentObject var dataController: CoreDataController
     @Environment(\.managedObjectContext) var managedObjectContext
-    
+
+    @State private var showingSortOrder = false
+    @State private var sortOrder = Item.SortOrder.optimized
+
     let showClosedProjects: Bool
     let projects: FetchRequest<Project>
-    
+
     init(showClosedProjects: Bool) {
         self.showClosedProjects = showClosedProjects
-        
+
         projects = FetchRequest<Project>(entity: Project.entity(),
                                          sortDescriptors: [NSSortDescriptor(keyPath: \Project.creationDate, ascending: false)],
                                          predicate: NSPredicate(format: "closed = %d", showClosedProjects))
     }
-    
+
     var body: some View {
         NavigationView {
             List {
                 ForEach(projects.wrappedValue) { project in
                     Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems) { item in
+                        ForEach(items(for: project)) { item in
                             ItemRowView(item: item)
                         }
                         // Or ... ForEach(project.projectItems, content: ItemRowView.init) // for simple single paramater views
@@ -42,7 +46,7 @@ struct ProjectsView: View {
                             }
                             dataController.save()
                         }
-                        
+
                         if showClosedProjects == false {
                             Button {
                                 withAnimation {
@@ -61,19 +65,49 @@ struct ProjectsView: View {
             .listStyle(InsetGroupedListStyle())
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
-                if showClosedProjects == false {
-                    Button {
-                        withAnimation {
-                            let project = Project(context: managedObjectContext)
-                            project.closed = false
-                            project.creationDate = Date()
-                            dataController.save()
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if showClosedProjects == false {
+                        Button {
+                            withAnimation {
+                                let project = Project(context: managedObjectContext)
+                                project.closed = false
+                                project.creationDate = Date()
+                                dataController.save()
+                            }
+                        } label: {
+                            Label("Add Project", systemImage: "plus")
                         }
+                    }
+                }
+
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        showingSortOrder.toggle()
                     } label: {
-                        Label("Add Project", systemImage: "plus")
+                        Label("Sort", systemImage: "arrow.up.arrow.down")
                     }
                 }
             }
+            .actionSheet(isPresented: $showingSortOrder) {
+                ActionSheet(title: Text("Sort Items"), message: nil, buttons: [
+                    .default(Text("Optimized")) { sortOrder = .optimized },
+                    .default(Text("Creation Date")) { sortOrder = .creationDate },
+                    .default(Text("Title")) { sortOrder = .title }
+                ])
+            }
+        }
+    }
+
+    func items(for project: Project) -> [Item] {
+        switch sortOrder {
+        case .title:
+            return project.projectItems.sorted(by: \Item.itemTitle)
+
+        case .creationDate:
+            return project.projectItems.sorted(by: \Item.itemCreationDate)
+
+        case .optimized:
+            return project.projectItemsDefaultSorted
         }
     }
 }
