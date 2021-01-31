@@ -28,6 +28,9 @@
 		2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92775259F9F9A00E25360 /* Assets.xcassets */; };
 		2BD92779259F9F9A00E25360 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */; };
 		2BDA58C725C657B6003F2F63 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */; };
+		2BDA58CB25C66022003F2F63 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDA58CA25C66022003F2F63 /* Awards.json */; };
+		2BDA58D325C660AA003F2F63 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58D125C660AA003F2F63 /* Award.swift */; };
+		2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58D225C660AA003F2F63 /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BD9277A259F9F9A00E25360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
+		2BDA58CA25C66022003F2F63 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		2BDA58D125C660AA003F2F63 /* Award.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		2BDA58D225C660AA003F2F63 /* AwardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,7 @@
 			children = (
 				2B0BAFFD25A25BAD006C6E5D /* Home */,
 				2B0BB00125A25DC8006C6E5D /* Projects */,
+				2BDA58D025C6606F003F2F63 /* Awards */,
 			);
 			name = Activities;
 			sourceTree = "<group>";
@@ -218,10 +225,11 @@
 		2BA5C62125ABA0C7001C3397 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2BD92777259F9F9A00E25360 /* Preview Content */,
+				2BDA58CA25C66022003F2F63 /* Awards.json */,
 				2BD92775259F9F9A00E25360 /* Assets.xcassets */,
 				2B11BC6625AAB642008F6D4D /* Colors.xcassets */,
 				2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */,
+				2BD92777259F9F9A00E25360 /* Preview Content */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -275,6 +283,15 @@
 				2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BDA58D025C6606F003F2F63 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				2BDA58D125C660AA003F2F63 /* Award.swift */,
+				2BDA58D225C660AA003F2F63 /* AwardsView.swift */,
+			);
+			name = Awards;
 			sourceTree = "<group>";
 		};
 		2BE0746B25A13D4600254F71 /* MissingNoodlePortfolioApp */ = {
@@ -380,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B11BC6725AAB642008F6D4D /* Colors.xcassets in Resources */,
+				2BDA58CB25C66022003F2F63 /* Awards.json in Resources */,
 				2BD92779259F9F9A00E25360 /* Preview Assets.xcassets in Resources */,
 				2BD92776259F9F9A00E25360 /* Assets.xcassets in Resources */,
 			);
@@ -430,11 +448,13 @@
 				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
 				2BD92774259F9F9900E25360 /* ContentView.swift in Sources */,
 				2B11BC5B25AAA78E008F6D4D /* ItemRowView.swift in Sources */,
+				2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */,
 				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
 				2B11BC6025AAAC18008F6D4D /* Binding-OnChange.swift in Sources */,
 				2B0BAFFF25A25BD0006C6E5D /* HomeView.swift in Sources */,
 				2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */,
 				2B0BB00825A26AD7006C6E5D /* Item-CoreDataHelpers.swift in Sources */,
+				2BDA58D325C660AA003F2F63 /* Award.swift in Sources */,
 				2B11BC5825AA9EFC008F6D4D /* EditItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
