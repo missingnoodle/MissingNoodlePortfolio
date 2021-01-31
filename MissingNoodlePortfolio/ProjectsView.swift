@@ -31,38 +31,45 @@ struct ProjectsView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(projects.wrappedValue) { project in
-                    Section(header: ProjectHeaderView(project: project)) {
-                        ForEach(project.projectItems(using: sortOrder)) { item in
-                            ItemRowView(item: item)
-                        }
-                        // Or ... ForEach(project.projectItems, content: ItemRowView.init) // for simple single paramater views
-                        .onDelete { offsets in
-                            let allItems = project.projectItems // projectItems, does a lot of work, sorting, etc. we don't
-                            for offset in offsets {             // want to do all that sortng each time through the for loop below
-                                let item = allItems[offset]
-                                dataController.delete(item)
-                            }
-                            dataController.save()
-                        }
-
-                        if showClosedProjects == false {
-                            Button {
-                                withAnimation {
-                                    let item = Item(context: managedObjectContext)
-                                    item.project = project
-                                    item.creationDate = Date()
+            Group {
+                if projects.wrappedValue.isEmpty {
+                    Text("There's nothing here right now")
+                        .foregroundColor(.secondary)
+                } else {
+                    List {
+                        ForEach(projects.wrappedValue) { project in
+                            Section(header: ProjectHeaderView(project: project)) {
+                                ForEach(project.projectItems(using: sortOrder)) { item in
+                                    ItemRowView(project: project, item: item)
+                                }
+                                // Or ... ForEach(project.projectItems, content: ItemRowView.init) // for simple single paramater views
+                                .onDelete { offsets in
+                                    let allItems = project.projectItems(using: sortOrder)   // projectItems, does a lot of work, sorting, etc. we don't
+                                    for offset in offsets {                                 // want to do all that sortng each time through the for loop below
+                                        let item = allItems[offset]
+                                        dataController.delete(item)
+                                    }
                                     dataController.save()
                                 }
-                            } label: {
-                                Label("Add New Item", systemImage: "plus")
+
+                                if showClosedProjects == false {
+                                    Button {
+                                        withAnimation {
+                                            let item = Item(context: managedObjectContext)
+                                            item.project = project
+                                            item.creationDate = Date()
+                                            dataController.save()
+                                        }
+                                    } label: {
+                                        Label("Add New Item", systemImage: "plus")
+                                    }
+                                }
                             }
                         }
                     }
+                    .listStyle(InsetGroupedListStyle())
                 }
             }
-            .listStyle(InsetGroupedListStyle())
             .navigationTitle(showClosedProjects ? "Closed Projects" : "Open Projects")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -95,6 +102,8 @@ struct ProjectsView: View {
                     .default(Text("Title")) { sortOrder = .title }
                 ])
             }
+
+            SelectSomethingView()
         }
     }
 }
