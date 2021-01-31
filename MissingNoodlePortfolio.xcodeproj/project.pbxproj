@@ -31,6 +31,7 @@
 		2BDA58CB25C66022003F2F63 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDA58CA25C66022003F2F63 /* Awards.json */; };
 		2BDA58D325C660AA003F2F63 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58D125C660AA003F2F63 /* Award.swift */; };
 		2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58D225C660AA003F2F63 /* AwardsView.swift */; };
+		2BDA58EC25C7406F003F2F63 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BDA58EB25C7406F003F2F63 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2BDA58CA25C66022003F2F63 /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
 		2BDA58D125C660AA003F2F63 /* Award.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		2BDA58D225C660AA003F2F63 /* AwardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		2BDA58EB25C7406F003F2F63 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +222,7 @@
 				2BDA58CA25C66022003F2F63 /* Awards.json */,
 				2BD92775259F9F9A00E25360 /* Assets.xcassets */,
 				2B11BC6625AAB642008F6D4D /* Colors.xcassets */,
+				2BDA58EB25C7406F003F2F63 /* Localizable.strings */,
 				2B0BAFED25A23295006C6E5D /* Main.xcdatamodeld */,
 				2BD92777259F9F9A00E25360 /* Preview Content */,
 			);
@@ -412,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDA58EC25C7406F003F2F63 /* Localizable.strings in Resources */,
 				2B11BC6725AAB642008F6D4D /* Colors.xcassets in Resources */,
 				2BDA58CB25C66022003F2F63 /* Awards.json in Resources */,
 				2BD92779259F9F9A00E25360 /* Preview Assets.xcassets in Resources */,
