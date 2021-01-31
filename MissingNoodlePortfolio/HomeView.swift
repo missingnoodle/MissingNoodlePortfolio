@@ -12,10 +12,12 @@ struct HomeView: View {
     static let tag: String? = "Home"
 
     @EnvironmentObject var dataController: CoreDataController
+
     @FetchRequest(entity: Project.entity(),
                   sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
                   predicate: NSPredicate(format: "closed = false"))
     var projects: FetchedResults<Project>
+
     let items: FetchRequest<Item>
 
     var projectRows: [GridItem] {
@@ -24,7 +26,14 @@ struct HomeView: View {
 
     init() {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
-        request.predicate = NSPredicate(format: "completed = false")
+
+        let completedPredicate = NSPredicate(format: "completed = false")
+        let openPredicate = NSPredicate(format: "project.closed = false")
+
+        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [completedPredicate, openPredicate])
+
+//        request.predicate = NSPredicate(format: "completed = false AND project.closed") // This is fine but a compound predicate is better, less stringy[
+        request.predicate = compoundPredicate
 
         request.sortDescriptors = [
             NSSortDescriptor(keyPath: \Item.priority, ascending: false)
@@ -71,6 +80,12 @@ struct HomeView: View {
             }
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
+            .toolbar {
+                Button("Add Data") {
+                    dataController.deleteAll()
+                    try? dataController.createSampleData()
+                }
+            }
         }
     }
 
@@ -117,8 +132,3 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
-
-//Button("Add Data") {
-//    dataController.deleteAll()
-//    try? dataController.createSampleData()
-//}
