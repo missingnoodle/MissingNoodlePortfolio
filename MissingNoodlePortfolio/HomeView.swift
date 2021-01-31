@@ -15,8 +15,7 @@ struct HomeView: View {
 
     @FetchRequest(entity: Project.entity(),
                   sortDescriptors: [NSSortDescriptor(keyPath: \Project.title, ascending: true)],
-                  predicate: NSPredicate(format: "closed = false"))
-    var projects: FetchedResults<Project>
+                  predicate: NSPredicate(format: "closed = false")) var projects: FetchedResults<Project>
 
     let items: FetchRequest<Item>
 
@@ -89,7 +88,7 @@ struct HomeView: View {
         }
     }
 
-    @ViewBuilder func list(_ title: String, for items: FetchedResults<Item>.SubSequence) -> some View {
+    @ViewBuilder func list(_ title: LocalizedStringKey, for items: FetchedResults<Item>.SubSequence) -> some View {
         if items.isEmpty {
             EmptyView()
         } else {

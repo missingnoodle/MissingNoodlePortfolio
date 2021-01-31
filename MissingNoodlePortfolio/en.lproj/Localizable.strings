@@ -1,0 +1,62 @@
+//"%lld items" = "%lld items"; Used in Localizable.stringsdict
+"Delete" = "Delete";
+"OK" = "OK";
+
+"Home" = "Home";
+"Open" = "Open";
+"Closed" = "Closed";
+"Awards" = "Awards";
+
+"Up next" = "Up next";
+"More to explore" = "More to explore";
+
+"Open Projects" = "Open Projects";
+"Closed Projects" = "Closed Projects";
+"Add Project" = "Add Project";
+"Add New Item" = "Add New Item";
+
+/* A button that shows a menu with the folowing items*/
+"Sort" = "Sort";
+"Sort Items" = "Sort Items";        /* The tite of the menu */
+"Optimized" = "Optimized";          /* Sort using an optimized algorithm */
+"Creation Date" = "Creation Date";  /* Sort by the date the item was created */
+"Title" = "Title";                  /* Sort by item title */
+
+"Basic settings" = "Basic settings";
+"Custom project color" = "Custom project color";
+"Delete project?" = "Delete project?";
+"Description" = "Description";
+"Description of this project" = "Description of this project";
+
+
+"Priority" = "Priority";
+"Low" = "Low";
+"Medium" = "Medium";
+"High" = "High";
+
+"New Item" = "New Item";
+"Item name" = "Item name";
+"Edit Item" = "Edit Item";
+"Mark Completed" = "Mark Completed";
+
+"New Project" = "New Project";
+"Edit Project" = "Edit Project";
+"Project name" = "Project name";
+
+"Close this project" = "Close this project";
+"Reopen this project" = "Reopen this project";
+"Delete this project" = "Delete this project";
+
+"Are you sure you want to delete this project? You will also delete all the items it contains." = "Are you sure you want to delete this project? You will also delete all the items it contains.";
+
+"Closing a project moves it from the Open to Closed tab; deleting it removes the entirely." = "Closing a project moves it from the Open to Closed tab; deleting it removes the entirely.";
+
+"Add Data" = "Add Data";
+
+"Please select something from the menu to begin" = "Please select something from the menu to begin";
+"There's nothing here right now" = "There's nothing here right now";
+
+
+"Unlocked: %@" = "Unlocked: %@";
+"Locked: %@" = "Locked: %@";
+

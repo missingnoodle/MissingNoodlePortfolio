@@ -22,7 +22,7 @@ extension Project {
                          "Gray"]
 
     var projectTitle: String {
-        title ?? ""
+        title ?? NSLocalizedString("New Project", comment: "Create a new project")
     }
 
     var projectDetail: String {
