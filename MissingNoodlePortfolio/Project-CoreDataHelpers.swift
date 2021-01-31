@@ -71,6 +71,19 @@ extension Project {
         return Double(completedItems.count) / Double(originalItems.count)
     }
 
+    func projectItems(using sortOrder: Item.SortOrder) -> [Item] {
+        switch sortOrder {
+        case .title:
+            return projectItems.sorted(by: \Item.itemTitle)
+
+        case .creationDate:
+            return projectItems.sorted(by: \Item.itemCreationDate)
+
+        case .optimized:
+            return projectItemsDefaultSorted
+        }
+    }
+
     static var example: Project {
         let controller = CoreDataController(inMemory: true)
         let viewContext = controller.container.viewContext
