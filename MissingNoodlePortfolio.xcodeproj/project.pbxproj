@@ -24,6 +24,8 @@
 		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
 		2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */; };
 		2B6CBA9D25B5FD4F006D47C8 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6CBA9C25B5FD4F006D47C8 /* MissingNoodleKit */; };
+		2B91699825C9F366004D8794 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91699725C9F366004D8794 /* ItemListView.swift */; };
+		2B91699E25C9F76B004D8794 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
 		2BD92774259F9F9900E25360 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92773259F9F9900E25360 /* ContentView.swift */; };
 		2BD92779259F9F9A00E25360 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD92778259F9F9A00E25360 /* Preview Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		2B6CBA8F25B5FC12006D47C8 /* iOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B6CBA9225B5FC13006D47C8 /* MacOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MacOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B6CBA9925B5FD2E006D47C8 /* MissingNoodleKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MissingNoodleKit; path = ../MissingNoodleKit; sourceTree = "<group>"; };
+		2B91699725C9F366004D8794 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioApp.swift; sourceTree = "<group>"; };
 		2BD92773259F9F9900E25360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -180,11 +184,12 @@
 			isa = PBXGroup;
 			children = (
 				2B11BC5625AA9EC1008F6D4D /* Items */,
-				2BDA58D725C66B04003F2F63 /* Models */,
+				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
 				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
 				2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */,
 				2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */,
 				2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */,
+				2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -192,8 +197,9 @@
 		2B11BC5625AA9EC1008F6D4D /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				2BDA58D925C66B36003F2F63 /* Models */,
+				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
 				2B11BC5725AA9EFC008F6D4D /* EditItemView.swift */,
+				2B91699725C9F366004D8794 /* ItemListView.swift */,
 				2B11BC5A25AAA78E008F6D4D /* ItemRowView.swift */,
 			);
 			name = Items;
@@ -288,26 +294,10 @@
 			name = Awards;
 			sourceTree = "<group>";
 		};
-		2BDA58D725C66B04003F2F63 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		2BDA58D825C66B19003F2F63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2BDA58D125C660AA003F2F63 /* Award.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		2BDA58D925C66B36003F2F63 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2B0BB00725A26AD7006C6E5D /* Item-CoreDataHelpers.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -462,9 +452,11 @@
 				2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */,
 				2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */,
 				2BDA58C725C657B6003F2F63 /* SelectSomethingView.swift in Sources */,
+				2B91699825C9F366004D8794 /* ItemListView.swift in Sources */,
 				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
 				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
 				2BD92774259F9F9900E25360 /* ContentView.swift in Sources */,
+				2B91699E25C9F76B004D8794 /* ProjectSummaryView.swift in Sources */,
 				2B11BC5B25AAA78E008F6D4D /* ItemRowView.swift in Sources */,
 				2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */,
 				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
