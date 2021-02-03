@@ -22,8 +22,10 @@
 		2B45A3DA25C788CF006D6505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B45A3D925C788CE006D6505 /* Assets.xcassets */; };
 		2B45A3DE25C788DA006D6505 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B45A3DD25C788DA006D6505 /* Colors.xcassets */; };
 		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
-		2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */; };
+		2B5F5C3D25B3B95300C294A1 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3C25B3B95300C294A1 /* AssetTests.swift */; };
 		2B6CBA9D25B5FD4F006D47C8 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6CBA9C25B5FD4F006D47C8 /* MissingNoodleKit */; };
+		2B73788925CA169700B4A159 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73788825CA169700B4A159 /* ProjectTests.swift */; };
+		2B73788F25CA30D700B4A159 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73788E25CA30D700B4A159 /* AwardTests.swift */; };
 		2B91699825C9F366004D8794 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91699725C9F366004D8794 /* ItemListView.swift */; };
 		2B91699E25C9F76B004D8794 /* ProjectSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */; };
 		2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */; };
@@ -66,10 +68,12 @@
 		2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingNoodlePortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodleBaseTestCase.swift; sourceTree = "<group>"; };
 		2B5F5C3225B3B83300C294A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsstTests.swift; sourceTree = "<group>"; };
+		2B5F5C3C25B3B95300C294A1 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		2B6CBA8F25B5FC12006D47C8 /* iOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = iOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B6CBA9225B5FC13006D47C8 /* MacOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MacOSPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2B6CBA9925B5FD2E006D47C8 /* MissingNoodleKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MissingNoodleKit; path = ../MissingNoodleKit; sourceTree = "<group>"; };
+		2B73788825CA169700B4A159 /* ProjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTests.swift; sourceTree = "<group>"; };
+		2B73788E25CA30D700B4A159 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 		2B91699725C9F366004D8794 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
 		2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryView.swift; sourceTree = "<group>"; };
 		2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissingNoodlePortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,9 +221,11 @@
 		2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */,
 				2B5F5C3225B3B83300C294A1 /* Info.plist */,
-				2B5F5C3C25B3B95300C294A1 /* AsstTests.swift */,
+				2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */,
+				2B5F5C3C25B3B95300C294A1 /* AssetTests.swift */,
+				2B73788E25CA30D700B4A159 /* AwardTests.swift */,
+				2B73788825CA169700B4A159 /* ProjectTests.swift */,
 			);
 			path = MissingNoodlePortfolioTests;
 			sourceTree = "<group>";
@@ -288,18 +294,10 @@
 		2BDA58D025C6606F003F2F63 /* Awards */ = {
 			isa = PBXGroup;
 			children = (
-				2BDA58D825C66B19003F2F63 /* Models */,
+				2BDA58D125C660AA003F2F63 /* Award.swift */,
 				2BDA58D225C660AA003F2F63 /* AwardsView.swift */,
 			);
 			name = Awards;
-			sourceTree = "<group>";
-		};
-		2BDA58D825C66B19003F2F63 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2BDA58D125C660AA003F2F63 /* Award.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		2BE0746B25A13D4600254F71 /* MissingNoodlePortfolioApp */ = {
@@ -440,8 +438,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B5F5C3D25B3B95300C294A1 /* AsstTests.swift in Sources */,
+				2B5F5C3D25B3B95300C294A1 /* AssetTests.swift in Sources */,
+				2B73788F25CA30D700B4A159 /* AwardTests.swift in Sources */,
 				2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */,
+				2B73788925CA169700B4A159 /* ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
