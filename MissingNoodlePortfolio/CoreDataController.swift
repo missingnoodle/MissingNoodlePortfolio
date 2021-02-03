@@ -24,6 +24,17 @@ class CoreDataController: ObservableObject {
         return dataController
     }()
 
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Main", withExtension: "momd") else {
+            fatalError("Failed to locate model file")
+        }
+
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failedto load model file.")
+        }
+
+        return managedObjectModel
+    }()
 
     /// The lone CloudKit container used to store all our data
     let container: NSPersistentCloudKitContainer
@@ -36,7 +47,7 @@ class CoreDataController: ObservableObject {
     ///   - inMemory: Whether to store this data in temporary memory or not
     ///   - containerName: The name used to identify the CloudKit container
     init(inMemory: Bool = false, containerName: String = "Main") {
-        self.container = NSPersistentCloudKitContainer(name: containerName)
+        self.container = NSPersistentCloudKitContainer(name: containerName, managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a temporary,
         // in-memory database by writing to /dev/null so our data is
