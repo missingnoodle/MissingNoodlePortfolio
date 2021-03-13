@@ -22,6 +22,7 @@
 		2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */; };
 		2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */; };
 		2B1C0A3925FC27A5003E5D40 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C0A3825FC27A5003E5D40 /* PerformanceTests.swift */; };
+		2B1C0A4125FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C0A4025FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift */; };
 		2B45A3DA25C788CF006D6505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B45A3D925C788CE006D6505 /* Assets.xcassets */; };
 		2B45A3DE25C788DA006D6505 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B45A3DD25C788DA006D6505 /* Colors.xcassets */; };
 		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
@@ -44,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2B1C0A4325FC3D13003E5D40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BD92766259F9F9900E25360 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BD9276D259F9F9900E25360;
+			remoteInfo = MissingNoodlePortfolio;
+		};
 		2B5F5C3325B3B83300C294A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2BD92766259F9F9900E25360 /* Project object */;
@@ -71,6 +79,9 @@
 		2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectHeaderView.swift; sourceTree = "<group>"; };
 		2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProjectView.swift; sourceTree = "<group>"; };
 		2B1C0A3825FC27A5003E5D40 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		2B1C0A3E25FC3D13003E5D40 /* MissingNoodlePortfolioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingNoodlePortfolioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B1C0A4025FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingNoodlePortfolioUITests.swift; sourceTree = "<group>"; };
+		2B1C0A4225FC3D13003E5D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B45A3D925C788CE006D6505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MissingNoodlePortfolio/Assets.xcassets; sourceTree = "<group>"; };
 		2B45A3DD25C788DA006D6505 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = MissingNoodlePortfolio/Colors.xcassets; sourceTree = "<group>"; };
 		2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissingNoodlePortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +113,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B1C0A3B25FC3D13003E5D40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B5F5C2B25B3B83300C294A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +255,15 @@
 			path = PerformanceTests;
 			sourceTree = "<group>";
 		};
+		2B1C0A3F25FC3D13003E5D40 /* MissingNoodlePortfolioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B1C0A4025FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift */,
+				2B1C0A4225FC3D13003E5D40 /* Info.plist */,
+			);
+			path = MissingNoodlePortfolioUITests;
+			sourceTree = "<group>";
+		};
 		2B45A3D825C788BC006D6505 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +315,7 @@
 			children = (
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
+				2B1C0A3F25FC3D13003E5D40 /* MissingNoodlePortfolioUITests */,
 				2BD9276F259F9F9900E25360 /* Products */,
 				2B0BAFF825A250ED006C6E5D /* Frameworks */,
 			);
@@ -298,6 +326,7 @@
 			children = (
 				2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */,
 				2B5F5C2E25B3B83300C294A1 /* MissingNoodlePortfolioTests.xctest */,
+				2B1C0A3E25FC3D13003E5D40 /* MissingNoodlePortfolioUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,6 +372,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B1C0A3D25FC3D13003E5D40 /* MissingNoodlePortfolioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B1C0A4525FC3D13003E5D40 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolioUITests" */;
+			buildPhases = (
+				2B1C0A3A25FC3D13003E5D40 /* Sources */,
+				2B1C0A3B25FC3D13003E5D40 /* Frameworks */,
+				2B1C0A3C25FC3D13003E5D40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B1C0A4425FC3D13003E5D40 /* PBXTargetDependency */,
+			);
+			name = MissingNoodlePortfolioUITests;
+			productName = MissingNoodlePortfolioUITests;
+			productReference = 2B1C0A3E25FC3D13003E5D40 /* MissingNoodlePortfolioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		2B5F5C2D25B3B83300C294A1 /* MissingNoodlePortfolioTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B5F5C3525B3B83300C294A1 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolioTests" */;
@@ -388,9 +435,13 @@
 		2BD92766259F9F9900E25360 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					2B1C0A3D25FC3D13003E5D40 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 2BD9276D259F9F9900E25360;
+					};
 					2B5F5C2D25B3B83300C294A1 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 2BD9276D259F9F9900E25360;
@@ -416,11 +467,19 @@
 			targets = (
 				2BD9276D259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2B5F5C2D25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
+				2B1C0A3D25FC3D13003E5D40 /* MissingNoodlePortfolioUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B1C0A3C25FC3D13003E5D40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B5F5C2C25B3B83300C294A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,6 +526,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B1C0A3A25FC3D13003E5D40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B1C0A4125FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B5F5C2A25B3B83300C294A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +575,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2B1C0A4425FC3D13003E5D40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BD9276D259F9F9900E25360 /* MissingNoodlePortfolio */;
+			targetProxy = 2B1C0A4325FC3D13003E5D40 /* PBXContainerItemProxy */;
+		};
 		2B5F5C3425B3B83300C294A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2BD9276D259F9F9900E25360 /* MissingNoodlePortfolio */;
@@ -546,6 +618,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B1C0A4625FC3D13003E5D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48CGK73HZD;
+				INFOPLIST_FILE = MissingNoodlePortfolioUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingnoodle.hws.MissingNoodlePortfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MissingNoodlePortfolio;
+			};
+			name = Debug;
+		};
+		2B1C0A4725FC3D13003E5D40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48CGK73HZD;
+				INFOPLIST_FILE = MissingNoodlePortfolioUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.missingnoodle.hws.MissingNoodlePortfolioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MissingNoodlePortfolio;
+			};
+			name = Release;
+		};
 		2B5F5C3625B3B83300C294A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -755,6 +867,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B1C0A4525FC3D13003E5D40 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B1C0A4625FC3D13003E5D40 /* Debug */,
+				2B1C0A4725FC3D13003E5D40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2B5F5C3525B3B83300C294A1 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

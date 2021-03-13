@@ -16,6 +16,6 @@ struct Award: Decodable, Identifiable {
     let value: Int
     let image: String
 
-    static let allAwards = Bundle.main.decode([Award].self, from: "Awards.json")
+    static let allAwards = Bundle.main.decode([Award].self, from: "Awards.json", fromBundleWithClass: CoreDataController.self)
     static let example = allAwards[0]
 }

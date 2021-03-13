@@ -22,6 +22,16 @@
                ReferencedContainer = "container:MissingNoodlePortfolio.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2B1C0A3D25FC3D13003E5D40"
+               BuildableName = "MissingNoodlePortfolioUITests.xctest"
+               BlueprintName = "MissingNoodlePortfolioUITests"
+               ReferencedContainer = "container:MissingNoodlePortfolio.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
