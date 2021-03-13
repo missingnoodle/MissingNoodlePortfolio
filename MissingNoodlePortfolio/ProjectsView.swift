@@ -5,7 +5,7 @@
 //  Created by Tami Black on 1/3/21.
 //
 
-import MNExtensions
+import MNAdditions
 import SwiftUI
 
 struct ProjectsView: View {
