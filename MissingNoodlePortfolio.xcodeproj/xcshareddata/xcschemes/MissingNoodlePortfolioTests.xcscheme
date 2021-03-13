@@ -31,6 +31,14 @@
                BlueprintName = "MissingNoodlePortfolioUITests"
                ReferencedContainer = "container:MissingNoodlePortfolio.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MissingNoodlePortfolioUITests/testEditingItemUpdatesCorrectly()">
+               </Test>
+               <Test
+                  Identifier = "MissingNoodlePortfolioUITests/testEditingProjectUpdatesCorrectly()">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

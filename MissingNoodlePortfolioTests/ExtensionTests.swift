@@ -36,13 +36,20 @@ class ExtensionTests: XCTestCase {
     }
 
     func testBundleDecodingAwards() {
-        let awards = Bundle.main.decode([Award].self, from: "Awards.json")
+        let awards = Bundle.main.decode([Award].self,
+                                        from: "Awards.json",
+                                        fromBundleWithClass: CoreDataController.self
+        )
         XCTAssertFalse(awards.isEmpty, "Awards.json should decode to a non-empty array.")
     }
 
     func testDecodingString() {
         let bundle = Bundle(for: ExtensionTests.self)
-        let data = bundle.decode(String.self, from: "DecodableString.json")
+        let data = bundle.decode(
+            String.self,
+            from: "DecodableString.json",
+            fromBundleWithClass: ExtensionTests.self
+        )
         XCTAssertEqual(data,
                        "The rain in Spain mostly falls on the Spaniards.",
                        "The string must mathe the content of DecodableString.json"
@@ -50,8 +57,11 @@ class ExtensionTests: XCTestCase {
     }
 
     func testDecodingDictionary() {
-        let bundle = Bundle(for: ExtensionTests.self)
-        let data = bundle.decode([String: Int].self, from: "DecodableDictionary.json")
+        let bundle = Bundle(for:  ExtensionTests.self)
+        let data = bundle.decode(
+            [String: Int].self,
+            from: "DecodableDictionary.json",
+            fromBundleWithClass: ExtensionTests.self)
         XCTAssertEqual(data.count, 3, "There should be 3 items decoded from DecodableDictionary.json.")
         XCTAssertEqual(data["One"], 1, "The dictionary should contain Int to String mappings.")
     }

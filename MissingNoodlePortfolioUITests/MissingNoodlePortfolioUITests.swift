@@ -55,7 +55,7 @@ class MissingNoodlePortfolioUITests: XCTestCase {
         app.buttons["NEW PROJECT"].tap()
         app.textFields["Project name"].tap()
 
-        app.keys["space"].tap()
+        app.keys["Space"].tap()
         app.keys["more"].tap()
         app.keys["2"].tap()
         app.buttons["Return"].tap()
@@ -78,7 +78,7 @@ class MissingNoodlePortfolioUITests: XCTestCase {
         app.buttons["Return"].tap()
 
         app.buttons["Open Projects"].tap()
-        XCTAssertTrue(app.buttons["New Item 2"].exists, "The new item name should be visible in the list.")
+        XCTAssertTrue(app.buttons["New Item 2"].waitForExistence(timeout: 1), "The new item name should be visible in the list.")
     }
 
     func testAllAwardsShowLockedAlert() {
@@ -87,7 +87,8 @@ class MissingNoodlePortfolioUITests: XCTestCase {
         for award in app.scrollViews.buttons.allElementsBoundByIndex {
             award.tap()
 
-            XCTAssert(app.alerts["LockedHi"].exists, "There should be a locked alert showing for awards.")
+
+            XCTAssert(app.alerts["Locked"].exists, "There should be a locked alert showing for awards.")
             app.buttons["OK"].tap()
         }
     }

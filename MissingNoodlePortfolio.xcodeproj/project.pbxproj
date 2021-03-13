@@ -41,6 +41,7 @@
 		2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDA58D225C660AA003F2F63 /* AwardsView.swift */; };
 		2BDA58FF25C779FA003F2F63 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2BDA590125C779FA003F2F63 /* Localizable.stringsdict */; };
 		2BDA590725C77AAB003F2F63 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BDA590925C77AAB003F2F63 /* Awards.json */; };
+		2BE86AB625FD3D75007BE70E /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */; };
 		2BF48E9E25D06AB300FF6A34 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		2BDA590C25C77AB8003F2F63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = MissingNoodlePortfolio/en.lproj/Awards.json; sourceTree = "<group>"; };
 		2BDA590D25C77ABB003F2F63 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = MissingNoodlePortfolio/hu.lproj/Awards.json; sourceTree = "<group>"; };
 		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		2BF48E9C25D06A9B00FF6A34 /* MissingNoodleKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MissingNoodleKit; path = ../MissingNoodleKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,10 +230,11 @@
 				2B11BC5625AA9EC1008F6D4D /* Items */,
 				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
 				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
+				2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */,
 				2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */,
+				2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */,
 				2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */,
 				2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */,
-				2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */,
 			);
 			name = Projects;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				2B91699E25C9F76B004D8794 /* ProjectSummaryView.swift in Sources */,
 				2B11BC5B25AAA78E008F6D4D /* ItemRowView.swift in Sources */,
 				2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */,
+				2BE86AB625FD3D75007BE70E /* ProjectsViewModel.swift in Sources */,
 				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
 				2B0BAFFF25A25BD0006C6E5D /* HomeView.swift in Sources */,
 				2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */,
