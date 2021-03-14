@@ -15,11 +15,6 @@ struct ProjectsView: View {
     @StateObject var viewModel: ViewModel
     @State private var showingSortOrder = false
 
-    init(dataController: CoreDataController, showClosedProjects: Bool) {
-        let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
-
     var projectsLists: some View {
         List {
             ForEach(viewModel.projects) { project in
@@ -106,6 +101,13 @@ struct ProjectsView: View {
             SelectSomethingView()
         }
     }
+
+
+    init(dataController: CoreDataController, showClosedProjects: Bool) {
+        let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
 }
 
 struct ProjectsView_Previews: PreviewProvider {

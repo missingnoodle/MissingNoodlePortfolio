@@ -55,13 +55,14 @@ class MissingNoodlePortfolioUITests: XCTestCase {
         app.buttons["NEW PROJECT"].tap()
         app.textFields["Project name"].tap()
 
-        app.keys["Space"].tap()
+        app.keys["space"].tap()
         app.keys["more"].tap()
         app.keys["2"].tap()
         app.buttons["Return"].tap()
 
         app.buttons["Open Projects"].tap()
         XCTAssertTrue(app.buttons["NEW PROJECT 2"].exists, "The new project name should be visible in the list.")
+
     }
 
     func testEditingItemUpdatesCorrectly() {
