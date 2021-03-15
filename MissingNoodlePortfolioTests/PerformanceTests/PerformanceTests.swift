@@ -19,7 +19,10 @@ class PerformanceTests: MissingNoodleBaseTestCase {
         let awards = Array(repeating: Award.allAwards, count: 25).joined()
 
         // Verify that the test criteria is not changed over time.
-        XCTAssertEqual(awards.count, 500, "This checks the number of awards is constant. Change this if new awards are added.")
+        XCTAssertEqual(awards.count,
+                       500,
+                       "This checks the number of awards is constant. Change this if new awards are added."
+        )
 
         measure {
             _ = awards.filter(dataController.hasEarned)

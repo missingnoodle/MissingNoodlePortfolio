@@ -44,7 +44,7 @@
 		2BDB003425FD8E0E00766E22 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB003325FD8E0E00766E22 /* HomeViewModel.swift */; };
 		2BDB003625FD9C7D00766E22 /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB003525FD9C7D00766E22 /* ItemRowViewModel.swift */; };
 		2BE86AB625FD3D75007BE70E /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */; };
-		2BF48E9E25D06AB300FF6A34 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */; };
+		2BEC47F725FED6C7003023BD /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BEC47F625FED6C7003023BD /* MissingNoodleKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */,
-				2BF48E9E25D06AB300FF6A34 /* MissingNoodleKit in Frameworks */,
+				2BEC47F725FED6C7003023BD /* MissingNoodleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +421,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BD9277D259F9F9A00E25360 /* Build configuration list for PBXNativeTarget "MissingNoodlePortfolio" */;
 			buildPhases = (
+				2B374A9D25FED90E00888C65 /* ShellScript */,
 				2BD9276A259F9F9900E25360 /* Sources */,
-				2BE0746425A1388800254F71 /* Run Script - Swiftlint */,
 				2BD9276B259F9F9900E25360 /* Frameworks */,
 				2BD9276C259F9F9900E25360 /* Resources */,
 			);
@@ -432,7 +432,7 @@
 			);
 			name = MissingNoodlePortfolio;
 			packageProductDependencies = (
-				2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */,
+				2BEC47F625FED6C7003023BD /* MissingNoodleKit */,
 			);
 			productName = MissingNoodlePortfolio;
 			productReference = 2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */;
@@ -470,6 +470,9 @@
 				hu,
 			);
 			mainGroup = 2BD92765259F9F9900E25360;
+			packageReferences = (
+				2BEC47F525FED6C7003023BD /* XCRemoteSwiftPackageReference "MissingNoodleKit" */,
+			);
 			productRefGroup = 2BD9276F259F9F9900E25360 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -514,7 +517,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2BE0746425A1388800254F71 /* Run Script - Swiftlint */ = {
+		2B374A9D25FED90E00888C65 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -523,14 +526,13 @@
 			);
 			inputPaths = (
 			);
-			name = "Run Script - Swiftlint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -917,9 +919,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2BEC47F525FED6C7003023BD /* XCRemoteSwiftPackageReference "MissingNoodleKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/missingnoodle/MissingNoodleKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "1.0.0-Beta.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */ = {
+		2BEC47F625FED6C7003023BD /* MissingNoodleKit */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 2BEC47F525FED6C7003023BD /* XCRemoteSwiftPackageReference "MissingNoodleKit" */;
 			productName = MissingNoodleKit;
 		};
 /* End XCSwiftPackageProductDependency section */

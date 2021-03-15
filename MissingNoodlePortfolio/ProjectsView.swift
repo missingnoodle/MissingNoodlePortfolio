@@ -45,8 +45,8 @@ struct ProjectsView: View {
     var addProjectToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
             if viewModel.showClosedProjects == false {
-                Button{
-                    withAnimation{
+                Button {
+                    withAnimation {
                         viewModel.addProject()
                     }
                 } label: {
@@ -102,12 +102,10 @@ struct ProjectsView: View {
         }
     }
 
-
     init(dataController: CoreDataController, showClosedProjects: Bool) {
         let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
-
 }
 
 struct ProjectsView_Previews: PreviewProvider {
