@@ -57,7 +57,7 @@ class ExtensionTests: XCTestCase {
     }
 
     func testDecodingDictionary() {
-        let bundle = Bundle(for: ExtensionTests.self)
+        let bundle = Bundle(for:  ExtensionTests.self)
         let data = bundle.decode(
             [String: Int].self,
             from: "DecodableDictionary.json",

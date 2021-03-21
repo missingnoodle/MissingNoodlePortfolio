@@ -34,7 +34,7 @@ extension HomeView {
             projectRequest.sortDescriptors = [NSSortDescriptor(keyPath: \Project.title, ascending: true)]
 
             projectsController = NSFetchedResultsController(
-                fetchRequest: projectRequest,
+            fetchRequest: projectRequest,
                 managedObjectContext: dataController.container.viewContext,
                 sectionNameKeyPath: nil,
                 cacheName: nil

@@ -66,8 +66,7 @@ class MissingNoodlePortfolioUITests: XCTestCase {
     }
 
     func testEditingItemUpdatesCorrectly() {
-        // Go to Open projects and add one project and one item before the test,
-        // generally not a great idea to have one test call another, but
+        // Go to Open projects and add one project and one item before the test, generally not a great idea to have one test call another, but
         // in this case all tests run independently
         testAddingItemInsertsRows()
 
@@ -80,9 +79,7 @@ class MissingNoodlePortfolioUITests: XCTestCase {
         app.buttons["Return"].tap()
 
         app.buttons["Open Projects"].tap()
-        XCTAssertTrue(app.buttons["New Item 2"].waitForExistence(timeout: 1),
-                      "The new item name should be visible in the list."
-        )
+        XCTAssertTrue(app.buttons["New Item 2"].waitForExistence(timeout: 1), "The new item name should be visible in the list.")
     }
 
     func testAllAwardsShowLockedAlert() {
@@ -90,6 +87,7 @@ class MissingNoodlePortfolioUITests: XCTestCase {
 
         for award in app.scrollViews.buttons.allElementsBoundByIndex {
             award.tap()
+
 
             XCTAssert(app.alerts["Locked"].exists, "There should be a locked alert showing for awards.")
             app.buttons["OK"].tap()
