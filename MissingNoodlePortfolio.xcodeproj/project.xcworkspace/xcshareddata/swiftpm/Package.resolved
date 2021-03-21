@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MissingNoodleKit",
+        "repositoryURL": "https://github.com/missingnoodle/MissingNoodleKit.git",
+        "state": {
+          "branch": null,
+          "revision": "5a45c78174aa1e5984b8b69d1091e263992aea7c",
+          "version": "1.0.0-Beta.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

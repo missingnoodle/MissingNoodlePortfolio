@@ -23,6 +23,7 @@
 		2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */; };
 		2B1C0A3925FC27A5003E5D40 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C0A3825FC27A5003E5D40 /* PerformanceTests.swift */; };
 		2B1C0A4125FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C0A4025FC3D13003E5D40 /* MissingNoodlePortfolioUITests.swift */; };
+		2B4293562606E61500095CE6 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2B4293552606E61500095CE6 /* MissingNoodleKit */; };
 		2B45A3DA25C788CF006D6505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B45A3D925C788CE006D6505 /* Assets.xcassets */; };
 		2B45A3DE25C788DA006D6505 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B45A3DD25C788DA006D6505 /* Colors.xcassets */; };
 		2B5F5C3125B3B83300C294A1 /* MissingNoodleBaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F5C3025B3B83300C294A1 /* MissingNoodleBaseTestCase.swift */; };
@@ -44,7 +45,6 @@
 		2BDB003425FD8E0E00766E22 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB003325FD8E0E00766E22 /* HomeViewModel.swift */; };
 		2BDB003625FD9C7D00766E22 /* ItemRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB003525FD9C7D00766E22 /* ItemRowViewModel.swift */; };
 		2BE86AB625FD3D75007BE70E /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */; };
-		2BF48E9E25D06AB300FF6A34 /* MissingNoodleKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +115,6 @@
 		2BDB003525FD9C7D00766E22 /* ItemRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowViewModel.swift; sourceTree = "<group>"; };
 		2BE0747025A13FAA00254F71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
-		2BF48E9C25D06A9B00FF6A34 /* MissingNoodleKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MissingNoodleKit; path = ../MissingNoodleKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */,
-				2BF48E9E25D06AB300FF6A34 /* MissingNoodleKit in Frameworks */,
+				2B4293562606E61500095CE6 /* MissingNoodleKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				2B0BAFF925A250ED006C6E5D /* CloudKit.framework */,
-				2BF48E9C25D06A9B00FF6A34 /* MissingNoodleKit */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -432,7 +430,7 @@
 			);
 			name = MissingNoodlePortfolio;
 			packageProductDependencies = (
-				2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */,
+				2B4293552606E61500095CE6 /* MissingNoodleKit */,
 			);
 			productName = MissingNoodlePortfolio;
 			productReference = 2BD9276E259F9F9900E25360 /* MissingNoodlePortfolio.app */;
@@ -470,6 +468,9 @@
 				hu,
 			);
 			mainGroup = 2BD92765259F9F9900E25360;
+			packageReferences = (
+				2B4293542606E61500095CE6 /* XCRemoteSwiftPackageReference "MissingNoodleKit" */,
+			);
 			productRefGroup = 2BD9276F259F9F9900E25360 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -917,9 +918,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2B4293542606E61500095CE6 /* XCRemoteSwiftPackageReference "MissingNoodleKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/missingnoodle/MissingNoodleKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "1.0.0-Beta.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		2BF48E9D25D06AB300FF6A34 /* MissingNoodleKit */ = {
+		2B4293552606E61500095CE6 /* MissingNoodleKit */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 2B4293542606E61500095CE6 /* XCRemoteSwiftPackageReference "MissingNoodleKit" */;
 			productName = MissingNoodleKit;
 		};
 /* End XCSwiftPackageProductDependency section */
