@@ -45,7 +45,7 @@ struct EditItemView: View {
             }
         }
         .navigationTitle("Edit Item")
-        .onDisappear(perform: dataController.save)
+        .onDisappear(perform: save)
 //        .onDisappear(perform: update)
 //        .onChange(of: title) { _ in update() }  // The SwiftUI way to handle updates, onDisappear not quite right
 //        .onChange(of: detail) { _ in update() }
@@ -61,6 +61,10 @@ struct EditItemView: View {
         item.detail = detail
         item.priority = Int16(priority)
         item.completed = completed
+    }
+
+    func save() {
+        dataController.update(item)
     }
 }
 

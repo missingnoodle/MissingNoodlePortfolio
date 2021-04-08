@@ -6,12 +6,12 @@
 //
 
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 /// An environment singleton responsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking awards and delaing with sample data
 class CoreDataController: ObservableObject {
-
     static var preview: CoreDataController = {
         let dataController = CoreDataController(inMemory: true)
 
@@ -81,6 +81,13 @@ class CoreDataController: ObservableObject {
     }
 
     func delete(_ object: NSManagedObject) {
+        let id = object.objectID.uriRepresentation().absoluteString
+
+        if object is Item {
+            CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+        } else {
+            CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+        }
         container.viewContext.delete(object)
     }
 
@@ -145,5 +152,33 @@ class CoreDataController: ObservableObject {
         }
 
         try viewContext.save()
+    }
+
+    func update(_ item: Item) {
+        let itemID = item.objectID.uriRepresentation().absoluteString
+        let projectID = item.project?.objectID.uriRepresentation().absoluteString
+
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = item.itemTitle
+        attributeSet.contentDescription = item.itemDetail
+
+        let searchableItem = CSSearchableItem(
+            uniqueIdentifier: itemID,
+            domainIdentifier: projectID,
+            attributeSet: attributeSet
+        )
+
+        CSSearchableIndex.default().indexSearchableItems([searchableItem])
+        save()
+    }
+
+    func item(with uniqueIdentifier: String) -> Item? {
+        guard let url = URL(string: uniqueIdentifier) else { return nil }
+
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+
+        return try? container.viewContext.existingObject(with: id) as? Item
     }
 }
