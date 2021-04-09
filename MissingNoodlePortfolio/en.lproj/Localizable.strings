@@ -67,6 +67,13 @@
 "Dark Gray" = "Dark Gray";
 "Gray" = "Gray";
 
+"Project reminders" = "Project reminders";
+"Show reminders" = "Show reminders";
+"Oops!" = "Oops!";
+"There was a problem. Please check you have notifications enabled." = "There was a problem. Please check you have notifications enabled.";
+"Check Settings" = "Check Settings";
+"Reminder time" = "Reminder time";
+
 "Closing a project moves it from the Open to Closed tab; deleting it removes the entirely." = "Closing a project moves it from the Open to Closed tab; deleting it removes the entirely.";
 
 "Add Data" = "Add Data";

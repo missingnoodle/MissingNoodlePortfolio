@@ -19,8 +19,12 @@ struct EditProjectView: View {
     @State private var color: String
 
     @State private var showingDeleteConfirm = false
+    @State private var showingNotificationErrors = false
 
     @State private var hapticEngine = try? CHHapticEngine()
+
+    @State private var remindMe: Bool
+    @State private var reminderTime: Date
 
     let colorColumns = [
         GridItem(.adaptive(minimum: 44))
@@ -34,6 +38,14 @@ struct EditProjectView: View {
         _title = State(wrappedValue: project.projectTitle)
         _detail = State(wrappedValue: project.projectDetail)
         _color = State(wrappedValue: project.projectColor)
+
+        if let projectReminderTime = project.reminderTime {
+            _reminderTime = State(wrappedValue: projectReminderTime)
+            _remindMe = State(wrappedValue: true)
+        } else {
+            _reminderTime = State(wrappedValue: Date())
+            _remindMe = State(wrappedValue: false)
+        }
     }
 
     var body: some View {
@@ -50,6 +62,24 @@ struct EditProjectView: View {
                     ForEach(Project.colors, id: \.self, content: colorButton)
                 }
                 .padding(.vertical)
+            }
+
+            Section(header: Text("Project reminders")) {
+                Toggle("Show reminders", isOn: $remindMe.animation().onChange(update))
+                    .alert(isPresented: $showingNotificationErrors) {
+                        Alert(title: Text("Oops!"),
+                              message: Text("There was a problem. Please check you have notifications enabled."),
+                              primaryButton: .default(Text("Check Settings"), action: showAppSettings),
+                              secondaryButton: .cancel()
+                        )
+                    }
+
+                if remindMe {
+                    DatePicker("Reminder time",
+                               selection: $reminderTime.onChange(update),
+                               displayedComponents: .hourAndMinute
+                    )
+                }
             }
 
             Section(footer: Text("Closing a project moves it from the Open to Closed tab; deleting it removes the entirely.")) {
@@ -73,7 +103,6 @@ struct EditProjectView: View {
 
     func toggleClosed() {
         project.closed.toggle()
-
         if project.closed {
             // Simple haptics, old school
             // UINotificationFeedbackGenerator().notificationOccurred(.success)
@@ -121,6 +150,22 @@ struct EditProjectView: View {
         project.title = title
         project.detail = detail
         project.color = color
+
+        if remindMe {
+            project.reminderTime = reminderTime
+
+            dataController.addRemiders(for: project) { success in
+                if success == false {
+                    project.reminderTime = nil
+                    remindMe = false
+
+                    showingNotificationErrors = true
+                }
+            }
+        } else {
+            project.reminderTime = nil
+            dataController.removeReminders(for: project)
+        }
     }
 
     func delete() {
@@ -149,6 +194,14 @@ struct EditProjectView: View {
             item == color ? [.isButton, .isSelected] : .isButton
         )
         .accessibilityLabel(LocalizedStringKey(item))
+    }
+}
+
+func showAppSettings() {
+    guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return }
+
+    if UIApplication.shared.canOpenURL(settingsURL) {
+        UIApplication.shared.open(settingsURL)
     }
 }
 
