@@ -10,10 +10,14 @@ import SwiftUI
 @main
 struct MissingNoodlePortfolioApp: App {
     @StateObject var coreDataController: CoreDataController
+    @StateObject var unlockManager: UnlockManager
 
     init() {
-        let coreDataController = CoreDataController()
-        _coreDataController = StateObject(wrappedValue: coreDataController)
+        let dataController = CoreDataController()
+        let unlockManager = UnlockManager(dataController: dataController)
+
+        _coreDataController = StateObject(wrappedValue: dataController)
+        _unlockManager = StateObject(wrappedValue: unlockManager)
     }
 
     var body: some Scene {
@@ -21,6 +25,7 @@ struct MissingNoodlePortfolioApp: App {
             ContentView()
                 .environment(\.managedObjectContext, coreDataController.container.viewContext)
                 .environmentObject(coreDataController)
+                .environmentObject(unlockManager)
                 .onReceive(
                     // Automatically save when we detect that we are no longer
                     // the foreground app. Use this rather than the scene phase

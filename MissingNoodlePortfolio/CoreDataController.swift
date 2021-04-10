@@ -40,6 +40,20 @@ class CoreDataController: ObservableObject {
     /// The lone CloudKit container used to store all our data
     let container: NSPersistentCloudKitContainer
 
+    /// The UserDefaults suite where we're saving user data
+    let defaults: UserDefaults
+
+    /// Loads and saves whether our premium unlock has been purchased.
+    var fullVersionUnlocked: Bool {
+        get {
+            defaults.bool(forKey: "fullVersionUnloced")
+        }
+
+        set {
+            defaults.set(newValue, forKey: "fullVersionUnloced")
+        }
+    }
+
     /// Initializes a data controller, either in memory (for temporary use such as tesing and previewing),
     /// or on permanent storage (for use in regular app runs).
     ///
@@ -47,7 +61,9 @@ class CoreDataController: ObservableObject {
     /// - Parameters:
     ///   - inMemory: Whether to store this data in temporary memory or not
     ///   - containerName: The name used to identify the CloudKit container
-    init(inMemory: Bool = false, containerName: String = "Main") {
+    ///   - defaults: The UserDefaults suite where user data should be stored.
+    init(inMemory: Bool = false, containerName: String = "Main", defaults: UserDefaults = .standard) {
+        self.defaults = defaults
         self.container = NSPersistentCloudKitContainer(name: containerName, managedObjectModel: Self.model)
 
         // For testing and previewing purposes, we create a temporary,
