@@ -10,11 +10,11 @@ import XCTest
 @testable import MissingNoodlePortfolio
 
 class MissingNoodleBaseTestCase: XCTestCase {
-    var dataController: CoreDataController!
+    var dataController: DataController!
     var managedObjectContext: NSManagedObjectContext!
 
     override func setUpWithError() throws {
-        dataController = CoreDataController(inMemory: true)
+        dataController = DataController(inMemory: true)
         managedObjectContext = dataController.container.viewContext
     }
 

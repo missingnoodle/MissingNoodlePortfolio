@@ -23,7 +23,7 @@ class UnlockManager: NSObject, ObservableObject {
 
     @Published var requestState = RequestState.loading
 
-    private let dataController: CoreDataController
+    private let dataController: DataController
     private let request: SKProductsRequest
     private var loadedProducts = [SKProduct]()
 
@@ -31,7 +31,7 @@ class UnlockManager: NSObject, ObservableObject {
         SKPaymentQueue.canMakePayments()
     }
 
-    init(dataController: CoreDataController) {
+    init(dataController: DataController) {
         self.dataController = dataController
 
         let productIDs = Set(["com.missingnoodle.MissingNoodlePortfolio.unlock"])

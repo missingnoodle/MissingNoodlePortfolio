@@ -11,7 +11,7 @@
 		2B072A3C25CB11EF00A8C297 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B072A3B25CB11EF00A8C297 /* DecodableString.json */; };
 		2B09241325C7860B005205F1 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B09241125C7860A005205F1 /* Main.xcdatamodeld */; };
 		2B09241C25C787B0005205F1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B09241A25C787B0005205F1 /* Localizable.strings */; };
-		2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BAFF225A23591006C6E5D /* CoreDataController.swift */; };
+		2B0BAFF325A23591006C6E5D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BAFF225A23591006C6E5D /* DataController.swift */; };
 		2B0BAFFA25A250ED006C6E5D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BAFF925A250ED006C6E5D /* CloudKit.framework */; };
 		2B0BAFFF25A25BD0006C6E5D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BAFFE25A25BD0006C6E5D /* HomeView.swift */; };
 		2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */; };
@@ -31,6 +31,10 @@
 		2B73788925CA169700B4A159 /* ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73788825CA169700B4A159 /* ProjectTests.swift */; };
 		2B73788F25CA30D700B4A159 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73788E25CA30D700B4A159 /* AwardTests.swift */; };
 		2B7456942622076A00F5D989 /* UnlockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7456932622076A00F5D989 /* UnlockManager.swift */; };
+		2B7456992623745C00F5D989 /* SKProduct-LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7456982623745C00F5D989 /* SKProduct-LocalizedPrice.swift */; };
+		2B74569C2623880300F5D989 /* PurchaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74569B2623880300F5D989 /* PurchaseButton.swift */; };
+		2B74569F2623897C00F5D989 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B74569E2623897C00F5D989 /* ProductView.swift */; };
+		2B7456A126238BB800F5D989 /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7456A026238BB800F5D989 /* UnlockView.swift */; };
 		2B7CB7A925CACB5500070065 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CB7A825CACB5500070065 /* DevelopmentTests.swift */; };
 		2B7CB7AD25CADDFD00070065 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7CB7AC25CADDFD00070065 /* ExtensionTests.swift */; };
 		2B91699825C9F366004D8794 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B91699725C9F366004D8794 /* ItemListView.swift */; };
@@ -71,7 +75,7 @@
 		2B09241225C7860A005205F1 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		2B09241B25C787B0005205F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MissingNoodlePortfolio/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2B09241F25C787BA005205F1 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = MissingNoodlePortfolio/hu.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2B0BAFF225A23591006C6E5D /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		2B0BAFF225A23591006C6E5D /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2B0BAFF625A250D2006C6E5D /* MissingNoodlePortfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MissingNoodlePortfolio.entitlements; sourceTree = "<group>"; };
 		2B0BAFF925A250ED006C6E5D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2B0BAFFE25A25BD0006C6E5D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,10 @@
 		2B73788E25CA30D700B4A159 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 		2B7456932622076A00F5D989 /* UnlockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockManager.swift; sourceTree = "<group>"; };
 		2B745696262209B200F5D989 /* StoreKteConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKteConfiguration.storekit; sourceTree = "<group>"; };
+		2B7456982623745C00F5D989 /* SKProduct-LocalizedPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKProduct-LocalizedPrice.swift"; sourceTree = "<group>"; };
+		2B74569B2623880300F5D989 /* PurchaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseButton.swift; sourceTree = "<group>"; };
+		2B74569E2623897C00F5D989 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		2B7456A026238BB800F5D989 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
 		2B7CB7A825CACB5500070065 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		2B7CB7AC25CADDFD00070065 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		2B91699725C9F366004D8794 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
@@ -169,10 +177,10 @@
 		2B09240425C783C6005205F1 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2B7456922622075100F5D989 /* Managers */,
 				2BD92771259F9F9900E25360 /* MissingNoodlePortfolioApp.swift */,
 				2BD92773259F9F9900E25360 /* ContentView.swift */,
-				2B0BAFF125A2355B006C6E5D /* Controllers */,
+				2B0BAFF225A23591006C6E5D /* DataController.swift */,
+				2B7456932622076A00F5D989 /* UnlockManager.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -196,14 +204,6 @@
 			path = "MissingNoodlePortfolio/Core Data";
 			sourceTree = "<group>";
 		};
-		2B0BAFF125A2355B006C6E5D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2B0BAFF225A23591006C6E5D /* CoreDataController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		2B0BAFF825A250ED006C6E5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +217,7 @@
 			children = (
 				2B0BAFFD25A25BAD006C6E5D /* Home */,
 				2B0BB00125A25DC8006C6E5D /* Projects */,
+				2B74569D2623895B00F5D989 /* Unlock */,
 				2BDA58D025C6606F003F2F63 /* Awards */,
 			);
 			name = Activities;
@@ -234,13 +235,13 @@
 		2B0BB00125A25DC8006C6E5D /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */,
 				2B11BC5625AA9EC1008F6D4D /* Items */,
 				2B0BB00A25A26AFF006C6E5D /* Project-CoreDataHelpers.swift */,
-				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
-				2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */,
 				2B11BC6325AAB1B3008F6D4D /* ProjectHeaderView.swift */,
 				2B91699D25C9F76B004D8794 /* ProjectSummaryView.swift */,
-				2B11BC6A25AAB937008F6D4D /* EditProjectView.swift */,
+				2B0BB00225A25DEE006C6E5D /* ProjectsView.swift */,
+				2BE86AB525FD3D75007BE70E /* ProjectsViewModel.swift */,
 				2BDA58C625C657B6003F2F63 /* SelectSomethingView.swift */,
 			);
 			name = Projects;
@@ -309,20 +310,23 @@
 			path = Playgrounds;
 			sourceTree = "<group>";
 		};
-		2B7456922622075100F5D989 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				2B7456932622076A00F5D989 /* UnlockManager.swift */,
-			);
-			name = Managers;
-			sourceTree = "<group>";
-		};
 		2B7456952622098300F5D989 /* Development */ = {
 			isa = PBXGroup;
 			children = (
 				2B745696262209B200F5D989 /* StoreKteConfiguration.storekit */,
 			);
 			path = Development;
+			sourceTree = "<group>";
+		};
+		2B74569D2623895B00F5D989 /* Unlock */ = {
+			isa = PBXGroup;
+			children = (
+				2B74569E2623897C00F5D989 /* ProductView.swift */,
+				2B74569B2623880300F5D989 /* PurchaseButton.swift */,
+				2B7456982623745C00F5D989 /* SKProduct-LocalizedPrice.swift */,
+				2B7456A026238BB800F5D989 /* UnlockView.swift */,
+			);
+			name = Unlock;
 			sourceTree = "<group>";
 		};
 		2BA5C62125ABA0C7001C3397 /* Resources */ = {
@@ -341,11 +345,11 @@
 		2BD92765259F9F9900E25360 = {
 			isa = PBXGroup;
 			children = (
+				2B0BAFF825A250ED006C6E5D /* Frameworks */,
 				2BD92770259F9F9900E25360 /* MissingNoodlePortfolio */,
 				2B5F5C2F25B3B83300C294A1 /* MissingNoodlePortfolioTests */,
 				2B1C0A3F25FC3D13003E5D40 /* MissingNoodlePortfolioUITests */,
 				2BD9276F259F9F9900E25360 /* Products */,
-				2B0BAFF825A250ED006C6E5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -587,7 +591,10 @@
 				2B0BB00325A25DEE006C6E5D /* ProjectsView.swift in Sources */,
 				2B11BC6425AAB1B3008F6D4D /* ProjectHeaderView.swift in Sources */,
 				2BDA58C725C657B6003F2F63 /* SelectSomethingView.swift in Sources */,
+				2B7456A126238BB800F5D989 /* UnlockView.swift in Sources */,
+				2B74569C2623880300F5D989 /* PurchaseButton.swift in Sources */,
 				2BDB003625FD9C7D00766E22 /* ItemRowViewModel.swift in Sources */,
+				2B7456992623745C00F5D989 /* SKProduct-LocalizedPrice.swift in Sources */,
 				2B91699825C9F366004D8794 /* ItemListView.swift in Sources */,
 				2B0BB00B25A26AFF006C6E5D /* Project-CoreDataHelpers.swift in Sources */,
 				2B11BC6B25AAB937008F6D4D /* EditProjectView.swift in Sources */,
@@ -596,7 +603,8 @@
 				2B11BC5B25AAA78E008F6D4D /* ItemRowView.swift in Sources */,
 				2BDA58D425C660AA003F2F63 /* AwardsView.swift in Sources */,
 				2BE86AB625FD3D75007BE70E /* ProjectsViewModel.swift in Sources */,
-				2B0BAFF325A23591006C6E5D /* CoreDataController.swift in Sources */,
+				2B0BAFF325A23591006C6E5D /* DataController.swift in Sources */,
+				2B74569F2623897C00F5D989 /* ProductView.swift in Sources */,
 				2B0BAFFF25A25BD0006C6E5D /* HomeView.swift in Sources */,
 				2BD92772259F9F9900E25360 /* MissingNoodlePortfolioApp.swift in Sources */,
 				2B0BB00825A26AD7006C6E5D /* Item-CoreDataHelpers.swift in Sources */,

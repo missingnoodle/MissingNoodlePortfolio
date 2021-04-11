@@ -100,9 +100,12 @@ struct ProjectsView: View {
 
             SelectSomethingView()
         }
+        .sheet(isPresented: $viewModel.showingUnlockedView) {
+            UnlockView()
+        }
     }
 
-    init(dataController: CoreDataController, showClosedProjects: Bool) {
+    init(dataController: DataController, showClosedProjects: Bool) {
         let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -110,6 +113,6 @@ struct ProjectsView: View {
 
 struct ProjectsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectsView(dataController: CoreDataController.preview, showClosedProjects: false)
+        ProjectsView(dataController: DataController.preview, showClosedProjects: false)
     }
 }

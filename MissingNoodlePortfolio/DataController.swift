@@ -1,5 +1,5 @@
 //
-//  CoreDataController.swift
+//  DataController.swift
 //  MissingNoodlePortfolio
 //
 //  Created by Tami Black on 1/3/21.
@@ -7,14 +7,15 @@
 
 import CoreData
 import CoreSpotlight
+import StoreKit
 import SwiftUI
 import UserNotifications
 
 /// An environment singleton responsible for managing our Core Data stack, including handling saving,
 /// counting fetch requests, tracking awards and delaing with sample data
-class CoreDataController: ObservableObject {
-    static var preview: CoreDataController = {
-        let dataController = CoreDataController(inMemory: true)
+class DataController: ObservableObject {
+    static var preview: DataController = {
+        let dataController = DataController(inMemory: true)
 
         do {
             try dataController.createSampleData()
@@ -263,6 +264,17 @@ class CoreDataController: ObservableObject {
                     completion(false)
                 }
             }
+        }
+    }
+
+    func appLaunched() {
+        guard count(for: Project.fetchRequest()) >= 5 else { return }
+
+        let allScenes = UIApplication.shared.connectedScenes
+        let scene = allScenes.first { $0.activationState == .foregroundActive }
+
+        if let windowScene = scene as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: windowScene)
         }
     }
 }

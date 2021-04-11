@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
-    @EnvironmentObject var dataController: CoreDataController
+    @EnvironmentObject var dataController: DataController
     var body: some View {
         TabView(selection: $selectedView) {
             HomeView(dataController: dataController)
@@ -49,7 +49,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var dataController = CoreDataController.preview
+    static var dataController = DataController.preview
     static var previews: some View {
         ContentView()
             .environment(\.managedObjectContext,

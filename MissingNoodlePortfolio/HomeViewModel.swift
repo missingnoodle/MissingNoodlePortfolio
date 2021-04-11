@@ -17,7 +17,7 @@ extension HomeView {
         @Published var items = [Item]()
         @Published var selectedItem: Item?
 
-        var dataController: CoreDataController
+        var dataController: DataController
 
         var upNext: ArraySlice<Item> {
             items.prefix(3)
@@ -27,7 +27,7 @@ extension HomeView {
             items.dropFirst(3)
         }
 
-        init(dataController: CoreDataController) {
+        init(dataController: DataController) {
             self.dataController = dataController
 
             let projectRequest: NSFetchRequest<Project> = Project.fetchRequest()

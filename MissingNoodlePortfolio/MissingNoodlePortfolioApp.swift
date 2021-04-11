@@ -9,22 +9,22 @@ import SwiftUI
 
 @main
 struct MissingNoodlePortfolioApp: App {
-    @StateObject var coreDataController: CoreDataController
+    @StateObject var dataController: DataController
     @StateObject var unlockManager: UnlockManager
 
     init() {
-        let dataController = CoreDataController()
+        let dataController = DataController()
         let unlockManager = UnlockManager(dataController: dataController)
 
-        _coreDataController = StateObject(wrappedValue: dataController)
+        _dataController = StateObject(wrappedValue: dataController)
         _unlockManager = StateObject(wrappedValue: unlockManager)
     }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, coreDataController.container.viewContext)
-                .environmentObject(coreDataController)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environmentObject(dataController)
                 .environmentObject(unlockManager)
                 .onReceive(
                     // Automatically save when we detect that we are no longer
@@ -34,10 +34,11 @@ struct MissingNoodlePortfolioApp: App {
                     NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification),
                     perform: save
                 )
+                .onAppear(perform: dataController.appLaunched)
         }
     }
 
     func save(_ note: Notification) {
-        coreDataController.save()
+        dataController.save()
     }
 }

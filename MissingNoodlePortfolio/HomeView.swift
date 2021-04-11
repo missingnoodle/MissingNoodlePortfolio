@@ -18,7 +18,7 @@ struct HomeView: View {
         [GridItem(.fixed(100))]
     }
 
-    init(dataController: CoreDataController) {
+    init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
         _viewModel = StateObject(wrappedValue: viewModel)
     }

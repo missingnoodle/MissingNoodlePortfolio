@@ -11,7 +11,7 @@ import SwiftUI
 struct EditProjectView: View {
     @ObservedObject var project: Project
 
-    @EnvironmentObject var dataController: CoreDataController
+    @EnvironmentObject var dataController: DataController
     @Environment(\.presentationMode) var presentationMode
 
     @State private var title: String

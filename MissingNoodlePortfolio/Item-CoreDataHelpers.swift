@@ -27,7 +27,7 @@ extension Item {
     }
 
     static var example: Item {
-        let controller = CoreDataController.preview
+        let controller = DataController.preview
         let viewContext = controller.container.viewContext
 
         let item = Item(context: viewContext)

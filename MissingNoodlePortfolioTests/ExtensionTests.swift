@@ -38,7 +38,7 @@ class ExtensionTests: XCTestCase {
     func testBundleDecodingAwards() {
         let awards = Bundle.main.decode([Award].self,
                                         from: "Awards.json",
-                                        fromBundleWithClass: CoreDataController.self
+                                        fromBundleWithClass: DataController.self
         )
         XCTAssertFalse(awards.isEmpty, "Awards.json should decode to a non-empty array.")
     }
