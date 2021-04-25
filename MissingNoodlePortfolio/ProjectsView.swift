@@ -103,12 +103,17 @@ struct ProjectsView: View {
         .sheet(isPresented: $viewModel.showingUnlockedView) {
             UnlockView()
         }
+        // .onOpenURL(perform: openURL) // not require since ContentView handles switching to the Open Projects tab and adds a new project
     }
 
     init(dataController: DataController, showClosedProjects: Bool) {
         let viewModel = ViewModel(dataController: dataController, showClosedProjects: showClosedProjects)
         _viewModel = StateObject(wrappedValue: viewModel)
     }
+
+//    func openURL(_ url: URL) {
+//        viewModel.addProject()
+//    }
 }
 
 struct ProjectsView_Previews: PreviewProvider {
