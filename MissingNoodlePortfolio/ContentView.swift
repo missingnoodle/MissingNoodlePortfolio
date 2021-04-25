@@ -11,6 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
     @EnvironmentObject var dataController: DataController
+
+    private let newProjectActivity = "com.missingnoodle.missingNoodlePortfolio.newProject"
+
     var body: some View {
         TabView(selection: $selectedView) {
             HomeView(dataController: dataController)
@@ -41,6 +44,12 @@ struct ContentView: View {
                 }
         }
         .onContinueUserActivity(CSSearchableItemActionType, perform: moveToHome) // Spotlight
+        .onContinueUserActivity(newProjectActivity, perform: createProject) // Integrating with Shortcuts
+
+        .userActivity(newProjectActivity, { activity in
+            activity.title = "New Project"
+            activity.isEligibleForPrediction = true
+        })
         .onOpenURL(perform: openURL)
     }
 
@@ -49,6 +58,11 @@ struct ContentView: View {
     }
 
     func openURL(_ url: URL) {
+        selectedView = ProjectsView.openTag
+        dataController.addProject()
+    }
+
+    func createProject(_ userActivity: NSUserActivity) {
         selectedView = ProjectsView.openTag
         dataController.addProject()
     }

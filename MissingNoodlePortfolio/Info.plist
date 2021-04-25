@@ -67,6 +67,10 @@
 			<string>rectangle.stack.badge.plus</string>
 		</dict>
 	</array>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>com.missingnoodle.missingNoodlePortfolio.newProject</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
