@@ -18,7 +18,7 @@ struct UnlockView: View {
             case .loaded(let product):
                 ProductView(product: product)
 
-            case .failed(_):
+            case .failed:
                 Text("Sorry, there was an error loading the store. Please try again later.")
 
             case .loading:
